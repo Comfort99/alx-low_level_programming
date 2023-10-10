@@ -2,7 +2,7 @@
 #include <unistd.h>
 /**
  * _putchar - write the character c to stdout
- * Gc : The character to print
+ * @c : The character to print
  *
  *Return: On success
  *On error, -1 is returned, and errno is set appropriately.
