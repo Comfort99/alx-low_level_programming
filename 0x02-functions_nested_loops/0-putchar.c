@@ -4,11 +4,7 @@
  * descpription - Print _putchar
  * Return 0
  */
-void _putchar(char c)
-{
-	putchar(c);
-}
-int main()
+int main(void)
 {
 	_putchar('_');
 	_putchar('p');
