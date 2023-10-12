@@ -6,33 +6,24 @@
  */
 int main(void)
 {
-	int num;
+	int i;
+	char a[] = "Fizz";
+	char b[] = "Buzz";
+	char c[] = "FizzBuzz";
 
-	for (num = 1; num <= 100; num++)
+	for (i = 1; i <= 100; i++)
 	{
-		if ((num % 3) == 0 && (num % 5) == 0)
-		{
-			printf("FizzBuzz");
-		}
-		else if ((num % 3) == 0)
-		{
-			printf("Fizz");
-		}
-		else if ((num % 5) == 0)
-		{
-			printf("Buzz");
-		}
+		if (i == 100)
+			printf("%s", b);
+		else if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%s ", c);
+		else if (i % 3 == 0)
+			printf("%s ", a);
+		else if (i % 5 == 0)
+			printf("%s ", b);
 		else
-		{
-			printf("%d", num);
-		}
-		if (num == 100)
-		{
-			continue;
-			printf(" ");
-		}
+			printf("%d ", i);
 	}
 	printf("\n");
-
-	return  (0);
+	return (0);
 }
