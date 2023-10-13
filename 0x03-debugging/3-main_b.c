@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- * main - Entry point
 * print_remaining_days - takes a date and prints how many days are left in the year, taking
 * @month: parameter
 * @day: parameter
@@ -14,7 +13,6 @@
 */
 
 void print_remaining_days(int month, int day, int year)
-int main(void)
 {
 	int month;
 	int day;
