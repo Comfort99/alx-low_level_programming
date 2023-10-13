@@ -12,8 +12,8 @@
 *
 * Return: 0
 */
-int main(void);
-void print_remaining_days(int month, int day, int year)
+void print_remaining_days(int month, int day, int year);
+int main(void)
 {
 	int month;
 	int day;
