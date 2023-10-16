@@ -5,15 +5,22 @@
  */
 void print_rev(char *s)
 {
-	char *end = s;
+	char c;
+	int length = 0;
+	int i;
 
-	while (*end != '\0')
+	while (*s != '\0')
 	{
-		end++;
+		length++;
+		s++;
 	}
-	while (end != s)
+
+	s--;
+
+	for (i = 0; i < length / 2; i++)
 	{
-		_putchar(*end);
-		end--;
+		c = s[i];
+		s[i] = s[length -i -1];
+		s[length -i -1] = c;
 	}
 }
