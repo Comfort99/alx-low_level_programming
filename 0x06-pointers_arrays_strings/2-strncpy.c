@@ -4,7 +4,7 @@
  * @dest: a pointer parameter of a function
  * @src: a pointer parameter of a function
  * @n: a pointer parameter
- * Return: retuern nothing
+ * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -12,12 +12,13 @@ char *_strncpy(char *dest, char *src, int n)
 
 	while (i < n && src[i] != '\0')
 	{
-		dest[i] = src[i];
 		i++;
+		dest[i] = src[i];
 	}
 	if (i < n)
 	{
 		dest[i] = '\0';
+		i++;
 	}
 	return (dest);
 }
