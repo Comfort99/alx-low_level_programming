@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 /**
  * cap_string - function that capitalizes all words of a string
  * @c: a pointer parameter
@@ -27,7 +28,7 @@ char *cap_string(char *c)
 				c[i - 1] == ',' ||
 				c[i - 1] == '"' ||
 				c == 0)
-			c[i] -= 32;
+			c[i] = toupper(c[i]);
 		i++;
 	}
 	return (c);
