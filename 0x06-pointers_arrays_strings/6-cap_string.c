@@ -1,19 +1,19 @@
 #include "main.h"
-#include <ctype.h>
 /**
  * cap_string - function that capitalizes all words of a string
  * @c: a pointer parameter
- * Return: 0
+ * Return: pointer c
  */
 char *cap_string(char *c)
 {
 	int i = 0;
 
-	while (c[i])
+	while (c[i] != '\0')
 	{
-		while (!(c[i] >= 'a' && c[i] <= 'z') && c[i] != '\0')
-			i++;
-
+		if (c[0] >= 97 && c[0] <= 122)
+		{
+			c[0] = c[0] -32;
+		}
 		if (c[i - 1] == ' ' ||
 				c[i - 1] == '\n' ||
 				c[i - 1] == '\t' ||
@@ -28,7 +28,12 @@ char *cap_string(char *c)
 				c[i - 1] == ',' ||
 				c[i - 1] == '"' ||
 				c == 0)
-			c[i] = toupper(c[i]);
+		{
+			if (c[i + 1] >= 97 && c[i + 1] <= 122)
+			{
+				c[i + 1] = c[i + 1] - 32;
+			}
+		}
 		i++;
 	}
 	return (c);
