@@ -4,18 +4,23 @@
  * @dest:a pointer parameter of a function
  * @src: a pointer parameter of a function
  * @n: an int parameter of a function
- * Return: return dest 
+ * Return: dest 
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i;
-	int len = strlen(dest);
+	int i = 0;
+	int j = 0;
 
-	while (i = 0; i < n && *src != '\0'; i++)
+	while (dest[i] != '\0')
 	{
-		dest[len + i] = *src;
-		src++;
+		i++;
 	}
-	dest[len + i] = '\0';
+	while (j < n && src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest = '\0';
 	return dest;
 }

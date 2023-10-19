@@ -1,6 +1,5 @@
 #include "main.h"
 /**
- * main - entry point
  * reverse_array - function that reverses the content of an array of integers
  * @a: a pointer parameter
  * @n: a int parameter
