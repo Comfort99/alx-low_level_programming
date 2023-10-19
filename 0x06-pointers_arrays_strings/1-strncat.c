@@ -4,7 +4,7 @@
  * @dest:a pointer parameter of a function
  * @src: a pointer parameter of a function
  * @n: an int parameter of a function
- * Return: dest 
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -22,5 +22,5 @@ char *_strncat(char *dest, char *src, int n)
 		j++;
 	}
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }
