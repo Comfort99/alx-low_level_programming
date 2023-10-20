@@ -10,11 +10,11 @@ char *cap_string(char *c)
 
 	while (c[i] != '\0')
 	{
-		if (i== 0)
+		if (i == '\0')
 		{
-			if (c[0] >= 'a' && c[0] <= 'Z')
+			if (c[i] >= 'a' && c[i] <= 'Z')
 			{
-				c[0] = c[0] -32;
+				c[i] = c[i] -32;
 			}
 		}
 		else
@@ -34,7 +34,7 @@ char *cap_string(char *c)
 				c[i - 1] == '"' ||
 				c == 0)
 			{
-			if (c[i + 1] >= 'a' && c[i + 1] <= 'z')
+			if (c[i] >= 'a' && c[i] <= 'z')
 			{
 				c[i] = c[i] - 32;
 			}
