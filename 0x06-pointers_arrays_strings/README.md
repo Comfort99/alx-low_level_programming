@@ -14,3 +14,9 @@ Write a function that changes all lowercase letters of a string to uppercase.
 Write a function that capitalizes all words of a string.
 7. Mozart composed his music not for the elite, but for everybody
 Write a function that encodes a string into 1337.
+8. rot13
+Write a function that encodes a string using rot13.
+9. Numbers have life; they're not just symbols on paper
+Write a function that prints an integer.
+10. A dream doesn't become reality through magic; it takes sweat, determination and hard work
+Add one line to this code, so that the program prints a[2] = 98, followed by a new line
