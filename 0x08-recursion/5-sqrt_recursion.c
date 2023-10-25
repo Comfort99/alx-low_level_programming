@@ -1,9 +1,27 @@
 #include "main.h"
 #include <math.h>
 /**
- * _sqrt_recursion - function that returns the natural square root of a number.
+ * sqrt_check - function checks if the square of i is equal to n
  * @n: int parameter
- * Return: sqaure root of n
+ * @i: int parameter
+ * Return: result of sqaure
+ */
+int sqrt_check(int n, int i)
+{
+	if (i * i == n)
+	{
+		return (i);
+	}
+	else if (i * i > n)
+	{
+		return (-1);
+	}
+	return (sqrt_check(n, i + 1));
+}
+/**
+ * _sqrt_recursion -  function that returns the natural square root
+ * @n: int parameter
+ * Return: square root of n
  */
 int _sqrt_recursion(int n)
 {
@@ -11,23 +29,6 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (actual_sqrt_recursion(n, 0));
+	return (sqrt_check(n, 1));
 }
-/**
- * actual_sqrt_recursion - function that returns the sqaure root
- * @i: int parameter
- * @n: int parameter
- * Return: result of sqaure root
- */
-int actual_sqrt_recursion(int n, int i)
-{
-	if (i * i > n)
-	{
-		return (-1);
-	}
-	if (i * i == n)
-	{
-		return (i);
-	}
-	return (actual_sqrt_recursion(n, i + 1));
-}
+
