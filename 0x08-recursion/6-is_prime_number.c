@@ -1,25 +1,29 @@
 #include "main.h"
 #include <math.h>
 /**
- * is_prime_number -  function that returns 1 is a prime number
- * @n: int parameter
- * Return: result of a prime number
+ * prime_a -  function calculates a prime
+ * @a: int parameter
+ * @b: int parameter
+ * Return: return 0
  */
-int is_prime_number(int n)
+int prime_a(int a, int b)
 {
-	int i;
-
-	if (n < 2)
+	if (a <= 1 || (a != b && a % b == 0))
 	{
 		return (0);
 	}
-	for (i = 2; i * i <= n; i++)
+	else if (a == b)
 	{
-		if (n % i == 0)
-		{
-			return (0);
-		}
+		return (1);
 	}
-	return (1);
+	return (prime_a(a, b + 1));
 }
-
+/**
+ * is_prime_number - function that returns 1 if is a prime number
+ * @n: int parameter
+ * Return: return 0 or 1
+ */
+int is_prime_number(int n)
+{
+	return (prime_a(n, 2));
+}
