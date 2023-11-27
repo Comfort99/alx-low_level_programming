@@ -10,10 +10,7 @@
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
-int close_file(int fd, const char *filename);
-int copy_file(const char *from, const char *to);
-int main(int ac, char **av);
-int close_file(int fd, const char *filename);
-int copy_file(const char *from, const char *to);
+void check_IO_stat(int stat, int fd, char *filename, char mode);
+int main(int arg, char *argv[]);
 
 #endif
