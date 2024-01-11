@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_dnodient - Adds a new node at the begginning of a dlistint_t list
+ * add_dnodeint - Adds a new node at the begginning of a dlistint_t list
  * @head: Double pointer to the head of the list
  * @n: intiger data for the new node
  * Return: The address of the new element, or NULL if it failed
