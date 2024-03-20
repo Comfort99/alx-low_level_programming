@@ -1,0 +1,9 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = ${SRC:.c=.o}
+EXERCUTABLE = school
+
+all: ${EXERCUTABLE}
+
+${EXERCUTABLE}: ${OBJ}
+	${CC} ${OBJ} -o ${EXERCUTABLE}

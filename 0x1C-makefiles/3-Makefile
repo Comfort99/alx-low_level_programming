@@ -1,0 +1,24 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = ${SRC:%.c=%.o}
+EXERCUTABLE = school
+RM = rm -f
+
+%.o: %.c m.h
+	${CC} -c -o $@ $<
+
+all: ${OBJ}
+	${CC} ${OBJ} -o ${EXERCUTABLE}
+
+clean:
+	${RM} *.~ ${EXERCUTABLE}
+
+oclean:
+	${RM} ${OBJECT}
+
+fclean: clean oclean
+
+re: fclean all
+
+%.o: %.c m.h
+	${CC} -C $< -O $@
