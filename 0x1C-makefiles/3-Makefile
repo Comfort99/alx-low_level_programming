@@ -1,17 +1,17 @@
 CC = gcc
 SRC = main.c school.c
 OBJ = ${SRC:%.c=%.o}
-EXERCUTABLE = school
+NAME = school
 RM = rm -f
 
 %.o: %.c m.h
 	${CC} -c -o $@ $<
 
 all: ${OBJ}
-	${CC} ${OBJ} -o ${EXERCUTABLE}
+	${CC} ${OBJ} -o ${NAME}
 
 clean:
-	${RM} *.~ ${EXERCUTABLE}
+	${RM} *.~ ${NAME}
 
 oclean:
 	${RM} ${OBJECT}
