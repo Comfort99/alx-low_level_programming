@@ -4,6 +4,7 @@
  * value in a sorted array of integers
  * @array: pointer to the first element of the array
  * @size: number of elements in array
+ * @value: value of the element
  * Return: Index on success else -1
  */
 int binary_search(int *array, size_t size, int value)
